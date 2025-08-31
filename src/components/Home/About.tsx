@@ -19,7 +19,6 @@ export default function About() {
     "Docker",
   ];
 
-  
   return (
     <>
       <div className="p-20 flex justify-center items-center flex-col gap-6 text-black">
