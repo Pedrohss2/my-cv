@@ -52,6 +52,14 @@ export default function Header() {
           >
             Github
           </Link>
+
+          <Link
+            href="/Pedro Henrique.pdf"
+            download
+            className="hover:text-blue-500"
+          >
+            Baixar CV
+          </Link>
         </nav>
       </header>
 
@@ -74,6 +82,14 @@ export default function Header() {
             href={"https://github.com/Pedrohss2"}
           >
             Github
+          </Link>
+
+          <Link
+            href="/Pedro Henrique.pdf"
+            download
+            className="hover:text-blue-500"
+          >
+            Baixar CV
           </Link>
         </nav>
       )}
