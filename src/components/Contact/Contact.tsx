@@ -2,17 +2,14 @@
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
-import Button from "../Button/Button";
-import { use, useState } from "react";
+import { useState } from "react";
 
 export default function Contact() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmitMessage = (event: any) => {
-    event.preventDefault();
-  };
+  const handleSubmitMessage = () => {};
 
   return (
     <>

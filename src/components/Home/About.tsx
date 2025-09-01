@@ -73,7 +73,7 @@ export default function About() {
           </h1>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            {techs.map((valor: any, idx: any) => (
+            {techs.map((valor, idx) => (
               <div key={idx} className="bg-gray-100 p-4 rounded-lg shadow-md">
                 {valor}
               </div>

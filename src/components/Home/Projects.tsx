@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProjetoCard from "../Card/ProjetoCard";
 import { projetos } from "../../data/projetos";
 
@@ -13,7 +12,7 @@ export default function Projects() {
         </div>
 
         <div className="flex flex-col gap-6 items-center p-10 rounded-lg w-full">
-          {projetos.map((projetos: any, idx: any) => (
+          {projetos.map((projetos, idx) => (
             <div key={idx}>
               <ProjetoCard
                 imagem={projetos.imagem}
