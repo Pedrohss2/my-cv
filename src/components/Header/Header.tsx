@@ -1,27 +1,19 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className=" p-5 sm:p-5 bg-white-400 shadow-fuchsia-100 shadow-lg uppercase">
-      <header className="flex flex-row-reverse justify-between items-center text-black">
-        <nav className="flex flex-col sm:flex-row list-none gap-4  sm:gap-10  text-1xl ">
-          <li className="hover:text-blue-500">
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li className="hover:text-blue-500">
-            <Link href={"/"}>Sobre</Link>
-          </li>
-          <li className="hover:text-blue-500">
-            <Link href={"/"}>Linkedin</Link>
-          </li>
-          <li className="hover:text-blue-500">
-            <Link href={"/"}>Github</Link>
-          </li>
-        </nav>
+    <div className="p-5 bg-white shadow-lg uppercase text-black">
+      <header className="flex justify-between items-center text-black">
         <div className="flex items-center gap-3 hover:text-blue-500">
-          <div className="w-15 h-15 rounded-full overflow-hidden bg-black">
+          <div className="w-12 h-12 rounded-full overflow-hidden bg-black">
             <Image
               width={100}
               height={100}
@@ -33,7 +25,62 @@ export default function Header() {
           </div>
           <h1 className="text-sm sm:text-base">Pedro Henrique</h1>
         </div>
+
+        <button
+          className="sm:hidden text-2xl cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <IoMdClose /> : <CiMenuBurger />}
+        </button>
+
+        <nav className="hidden sm:flex flex-row gap-10 text-sm">
+          <Link className="hover:text-blue-500" href={"/"}>
+            Home
+          </Link>
+          <Link className="hover:text-blue-500" href={"/"}>
+            Sobre
+          </Link>
+          <Link
+            className="hover:text-blue-500"
+            href={"https://www.linkedin.com/in/pedro-henrique-b748a7261/"}
+            target="_blank"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            className="hover:text-blue-500"
+            href={"https://github.com/Pedrohss2"}
+            target="_blank"
+          >
+            Github
+          </Link>
+        </nav>
       </header>
+
+      {menuOpen && (
+        <nav className="flex flex-col gap-4 mt-4 sm:hidden text-sm items-center">
+          <Link className="hover:text-blue-500" href={"/"}>
+            Home
+          </Link>
+          <Link className="hover:text-blue-500" href={"/"}>
+            Sobre
+          </Link>
+          <Link
+            className="hover:text-blue-500"
+            href={"https://www.linkedin.com/in/pedro-henrique-b748a7261/"}
+            target="_blank"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            className="hover:text-blue-500"
+            href={"https://github.com/Pedrohss2"}
+            target="_blank"
+          >
+            Github
+          </Link>
+        </nav>
+      )}
     </div>
   );
 }
