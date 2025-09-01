@@ -43,14 +43,12 @@ export default function Header() {
           <Link
             className="hover:text-blue-500"
             href={"https://www.linkedin.com/in/pedro-henrique-b748a7261/"}
-            target="_blank"
           >
             LinkedIn
           </Link>
           <Link
             className="hover:text-blue-500"
             href={"https://github.com/Pedrohss2"}
-            target="_blank"
           >
             Github
           </Link>
@@ -68,14 +66,12 @@ export default function Header() {
           <Link
             className="hover:text-blue-500"
             href={"https://www.linkedin.com/in/pedro-henrique-b748a7261/"}
-            target="_blank"
           >
             LinkedIn
           </Link>
           <Link
             className="hover:text-blue-500"
             href={"https://github.com/Pedrohss2"}
-            target="_blank"
           >
             Github
           </Link>

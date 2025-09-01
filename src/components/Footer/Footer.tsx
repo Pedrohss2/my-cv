@@ -20,32 +20,36 @@ export default function Footer() {
               <Link href={"/"}>Sobre</Link>
             </li>
             <li className="hover:text-blue-500">
-              <Link href={"/"}>Linkedin</Link>
+              <Link
+                href={"https://www.linkedin.com/in/pedro-henrique-b748a7261/"}
+              >
+                Linkedin
+              </Link>
             </li>
             <li className="hover:text-blue-500">
-              <Link href={"/"}>Github</Link>
+              <Link href={"https://github.com/pedrohss"}>Github</Link>
             </li>
           </nav>
         </div>
 
-        {/* Redes sociais */}
         <div className="flex gap-6 text-lg">
           <a
             href="https://wa.me/5543920005946"
-            target="_blank"
             className="hover:text-green-500"
           >
             <MdLocalPhone color="green" />
           </a>
-          <a href="mailto:email@exemplo.com" className="hover:text-red-400">
+          <a
+            href="mailto:pedro2266809pg@gmail.com"
+            className="hover:text-red-400"
+          >
             <MdEmail />
           </a>
-          <a href="https://linkedin.com/in/seuperfil" target="_blank">
+          <a href="https://www.linkedin.com/in/pedro-henrique-b748a7261/">
             <FaLinkedin color="blue" />
           </a>
           <a
-            href="https://github.com/seuusuario"
-            target="_blank"
+            href="https://github.com/Pedrohss2"
             className="hover:text-gray-400"
           >
             <FaGithub />

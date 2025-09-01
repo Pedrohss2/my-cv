@@ -51,7 +51,6 @@ export default function About() {
             ou me seguir no
             <a
               href="https://www.linkedin.com/in/pedro-henrique-b748a7261/"
-              target="_blank"
               rel="noopener noreferrer"
               className="text-purple-700 font-bold"
             >
