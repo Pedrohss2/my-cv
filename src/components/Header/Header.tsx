@@ -10,8 +10,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="p-5 bg-white shadow-lg uppercase text-black">
-      <header className="flex justify-between items-center text-black">
+    <div className="p-5 bg-white  uppercase text-black">
+      <header className="flex justify-between items-center text-black ">
         <div className="flex items-center gap-3 hover:text-blue-500">
           <div className="w-12 h-12 rounded-full overflow-hidden bg-black">
             <Image

@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 
 export default function Home() {
   return (
-    <div className="px-6 py-16 bg-gray-100 text-gray-900">
+    <div className="px-6 py-16 bg-blue-100 text-gray-900">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-10">
         <div className="flex-1">
           <p className="text-2xl sm:text-3xl font-bold mb-4">
@@ -22,7 +22,7 @@ export default function Home() {
             transformar ideias em soluções funcionais e bem projetadas.
           </p>
           <div className="w-50 mt-10">
-            <Button text="Ver Projetos" href="/" />
+            <Button text="Ver Projetos" href="/https://github.com/Pedrohss2?tab=repositories" />
           </div>
         </div>
       </div>

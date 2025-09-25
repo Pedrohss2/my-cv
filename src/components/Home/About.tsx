@@ -31,7 +31,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-15">
+      <div className="flex flex-1 md:flex-row gap-15">
         <div className="w-full md:w-1/2 p-4 text-black text-center rounded-lg ">
           <h1 className="font-bold text-2xl uppercase mb-4">
             Saiba mais sobre mim
@@ -74,7 +74,7 @@ export default function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {techs.map((valor, idx) => (
-              <div key={idx} className="bg-gray-100 p-4 rounded-lg shadow-md">
+              <div key={idx} className="bg-gray-100 p-4 rounded-lg shadow-md hover:scale-105">
                 {valor}
               </div>
             ))}
