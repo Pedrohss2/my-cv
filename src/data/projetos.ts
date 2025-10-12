@@ -3,27 +3,15 @@ import { Projeto } from "../interfaces/Projetos";
 
 export const projetos: Projeto[] = [
   {
-    imagem: "/",
-    titulo: "Cardapio backend",
-    descricao: "API REST desenvolvida em NestJS para gerenciamento de cardápio digital, incluindo cadastro de produtos, usuarios, autenticação, categorias, pedidos e integração com banco de dados. Projetada com arquitetura limpa, garantindo escalabilidade, manutenibilidade e facilidade de integração com front-ends e aplicativos mobile.",
-    link: "https://github.com/Pedrohss2/cardapio-backend.git",
+    "imagem": '/image.png',
+    "titulo": "Cardápio Digital - Frontend",
+    "descricao": "Interface construída em Next.js com React, TypeScript e Tailwind CSS. Permite que usuários autenticados gerenciem produtos e categorias, realize upload de imagens e visualize o cardápio de forma responsiva. Integra-se com a API para operações completas de CRUD e autenticação.",
+    "link": "https://github.com/Pedrohss2/cardapio-front.git"
   },
   {
-    imagem: "/",
-    titulo: "Segundo projeto",
-    descricao: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    link: "/",
-  },
-  {
-    imagem: "/",
-    titulo: "Terceiro projeto",
-    descricao: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem",
-    link: "/",
-  },
-  {
-    imagem: "/",
-    titulo: "Quarto projeto",
-    descricao: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem",
-    link: "/",
+    "imagem": "/",
+    "titulo": "Cardápio Digital - API",
+    "descricao": "API desenvolvida em NestJS com TypeScript e Prisma ORM, PostgreSql, oferecendo CRUD completo para produtos, categorias e usuários, autenticação JWT, upload de imagens e integração com banco de dados relacional. Estrutura modular e arquitetura limpa para manutenção e escalabilidade.",
+    "link": "https://github.com/Pedrohss2/cardapio-backend.git"
   },
 ];
