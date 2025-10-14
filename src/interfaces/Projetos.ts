@@ -1,6 +1,6 @@
 
 export interface Projeto {
-  imagem: string;
+  imagem?: string;
   titulo: string;
   descricao: string;
   link: string;

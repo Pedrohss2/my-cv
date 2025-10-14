@@ -9,7 +9,7 @@ export const projetos: Projeto[] = [
     "link": "https://github.com/Pedrohss2/cardapio-front.git"
   },
   {
-    "imagem": "/",
+    "imagem": "",
     "titulo": "Cardápio Digital - API",
     "descricao": "API desenvolvida em NestJS com TypeScript e Prisma ORM, PostgreSql, oferecendo CRUD completo para produtos, categorias e usuários, autenticação JWT, upload de imagens e integração com banco de dados relacional. Estrutura modular e arquitetura limpa para manutenção e escalabilidade.",
     "link": "https://github.com/Pedrohss2/cardapio-backend.git"
