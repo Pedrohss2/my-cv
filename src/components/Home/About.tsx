@@ -74,7 +74,7 @@ export default function About() {
             Minhas habilidades
           </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {techs.map((valor, idx) => (
               <div key={idx} className="bg-gray-100 px-10 py-6 rounded-lg shadow-md border-1 border-gray-400">
                 {valor}
@@ -82,7 +82,7 @@ export default function About() {
             ))}
           </div>
           <h2 className="font-semibold text-xl mb-4 mt-4">Soft Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             {["Comunicação", "Trabalho em equipe", "Curiosidade", "Aprendizado contínuo", "Resiliência", "Organização"].map((skill, idx) => (
               <div key={idx} className="bg-blue-100 px-10 py-6 rounded-lg shadow-md border border-blue-300">
                 {skill}
