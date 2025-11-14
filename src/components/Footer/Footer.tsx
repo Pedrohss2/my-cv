@@ -31,7 +31,7 @@ export default function Footer() {
             </li>
             <li className="hover:text-blue-500">
               <Link
-                href="/Pedro Henrique.pdf"
+                href="/Cópia de Pedro Henrique.pdf"
                 download
                 className="hover:text-blue-500"
               >

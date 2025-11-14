@@ -96,7 +96,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/Pedro Henrique.pdf"
+            href="/Cópia de Pedro Henrique.pdf"
             download
             className="hover:text-blue-500"
           >
