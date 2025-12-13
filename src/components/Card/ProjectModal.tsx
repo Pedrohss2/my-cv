@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { IoMdClose } from "react-icons/io";
 
 
@@ -35,9 +36,11 @@ export default function ProjectModal({
                     <IoMdClose />
                 </button>
 
-                <div className="w-1/2 card-image-bg rounded overflow-hidden flex items-center justify-center">
+                <div className="w-1/2 card-image-bg rounded overflow-hidden relative">
                     {project.imagem ? (
-                        <img src={project.imagem} alt={project.titulo} className="w-full h-auto object-cover" />
+                        <div className="relative w-full h-64 sm:h-80 md:h-full">
+                            <Image src={project.imagem} alt={project.titulo} fill className="object-cover" />
+                        </div>
                     ) : (
                         <div className="text-muted p-8">Sem imagem</div>
                     )}

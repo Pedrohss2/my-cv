@@ -10,8 +10,8 @@ declare module 'react-animate-on-scroll' {
         offset?: number;
         initiallyVisible?: boolean;
         animatePreScroll?: boolean;
-        // allow any other props
-        [key: string]: any;
+        // allow other props
+        [key: string]: unknown;
     }
 
     const ScrollAnimation: React.ComponentType<ScrollAnimationProps>;

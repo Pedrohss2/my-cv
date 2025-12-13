@@ -4,12 +4,13 @@ import ProjetoCard from "../Card/ProjetoCard";
 import { projetos } from "../../data/projetos";
 import { useState } from "react";
 import ProjectModal from "../Card/ProjectModal";
+import { Projeto } from "@/interfaces/Projetos";
 
 export default function Projects() {
-  const [selected, setSelected] = useState<any | null>(null);
+  const [selected, setSelected] = useState<Projeto | null>(null);
   const [open, setOpen] = useState(false);
 
-  function openModal(p: any) {
+  function openModal(p: Projeto) {
     setSelected(p);
     setOpen(true);
   }

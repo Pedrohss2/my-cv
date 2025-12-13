@@ -3,7 +3,7 @@ import useInView from "../../hooks/useInView";
 
 type Props = Projeto & { onOpen?: () => void };
 
-export default function ProjetoCard({ imagem, titulo, descricao, link, onOpen }: Props) {
+export default function ProjetoCard({ imagem, titulo, link, onOpen }: Props) {
   const bgStyle = imagem ? { backgroundImage: `url(${imagem})` } : undefined;
   const inview = useInView<HTMLDivElement>({ threshold: 0.15 });
   const Card = (
