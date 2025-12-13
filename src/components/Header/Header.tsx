@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CiMenuBurger } from "react-icons/ci";
@@ -11,20 +11,44 @@ import { GrDownload } from "react-icons/gr";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Initialize theme from localStorage; default to dark if none
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark") setIsDark(true);
+    else if (stored === "light") setIsDark(false);
+    else {
+      setIsDark(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.toggle("dark", isDark);
+      try {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      } catch { }
+    }
+  }, [isDark]);
 
   return (
-    <div className="p-5 bg-white uppercase text-black fixed right-0 left-0 shadow-md shadow-blue-100 z-50">
-      <header className="flex justify-between items-center text-black ">
+    <div className="p-5 bg-[#0b0a10] backdrop-blur-sm text-white uppercase fixed right-0 left-0 border-b border-blue-600/30 z-50">
+      <header className="flex justify-around items-center text-white">
         <div className="flex items-center gap-3 ">
-          <div className="w-12 h-12 rounded-full overflow-hidden bg-black">
-            <Image
-              width={100}
-              height={100}
-              quality={100}
-              src="/minhaFoto.jpg"
-              alt="Minha foto"
-              className="object-cover w-full h-full"
-            />
+          <div className="w-12 h-12 rounded-full p-[2px] bg-gradient-to-br from-blue-500 to-blue-700">
+            <div className="w-full h-full rounded-full overflow-hidden bg-[#0b0a10]">
+              <Image
+                width={100}
+                height={100}
+                quality={100}
+                src="/minhaFoto.jpg"
+                alt="Minha foto"
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
           <div className="flex gap-1 flex-col">
 
@@ -33,12 +57,15 @@ export default function Header() {
           </div>
         </div>
 
-        <button
-          className="sm:hidden text-2xl cursor-pointer"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <IoMdClose /> : <CiMenuBurger />}
-        </button>
+
+        <div className="flex items-center gap-4">
+          <button
+            className="sm:hidden text-2xl cursor-pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <IoMdClose /> : <CiMenuBurger />}
+          </button>
+        </div>
 
         <nav className="hidden sm:flex flex-row gap-10 text-sm">
           <Link className="hover:text-blue-500 hover:scale-105 transition-all flex items-center gap-2" href={"/"}>

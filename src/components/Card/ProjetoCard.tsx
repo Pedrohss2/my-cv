@@ -1,52 +1,40 @@
-import Image from "next/image";
-import Button from "../Button/Button";
 import { Projeto } from "@/interfaces/Projetos";
-import { TbApi } from "react-icons/tb";
-import { FaArrowRight } from "react-icons/fa";
+import useInView from "../../hooks/useInView";
 
-export default function ProjetoCard({
-  imagem,
-  titulo,
-  descricao,
-  link,
-}: Projeto) {
-  return (
-    <div className="flex flex-col w-screen lg:flex-row items-center shadow-md border border-gray-300 transition-all justify-between gap-8 p-6 sm:p-10 rounded-xl  sm:w-full bg-white min-h-[480px]">
-      <div className="w-full lg:flex-1 bg-gray-100 flex items-center justify-center rounded-md overflow-hidden border border-gray-200 min-h-[260px] sm:min-h-[400px]">
-        {imagem ? (
-          <Image
-            alt={`Imagem do projeto ${titulo}`}
-            src={imagem}
-            width={800}
-            height={500}
-            className="w-full h-auto object-contain rounded-md"
-            quality={100}
-          />
-        ) : (
-          <div className="text-gray-400">
-            <TbApi size={50} />
-          </div>
-        )}
-      </div>
+type Props = Projeto & { onOpen?: () => void };
 
-      <div className="flex-1 flex flex-col justify-center text-center lg:text-left mt-6 lg:mt-0 px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-wide">
-          {titulo}
-        </h2>
-        <p className="text-gray-600 mb-6 sm:mb-10 text-base sm:text-lg leading-relaxed">
-          {descricao}
-        </p>
+export default function ProjetoCard({ imagem, titulo, descricao, link, onOpen }: Props) {
+  const bgStyle = imagem ? { backgroundImage: `url(${imagem})` } : undefined;
+  const inview = useInView<HTMLDivElement>({ threshold: 0.15 });
+  const Card = (
+    <div ref={inview.ref} className={`reveal ${inview.inView ? "in-view" : ""}`}>
+      <article className="relative rounded-lg overflow-hidden group shadow-lg min-h-[320px] transform-gpu transition-transform duration-300 ease-out hover:scale-105">
+        <div
+          className="w-full h-64 card-image-bg bg-center bg-cover filter brightness-50 group-hover:brightness-40 transition-all"
+          style={bgStyle}
+          aria-hidden
+        />
 
-        <div className="flex justify-center lg:justify-start">
-          <Button
-            text="Projeto"
-            href={link}
-            icon={<FaArrowRight size={20} color="white" />}
-          />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+          <h3 className="text-2xl font-bold card-title drop-shadow-md">{titulo}</h3>
         </div>
-      </div>
+
+        <div className="absolute left-4 right-4 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-blue-700" />
+      </article>
     </div>
+  );
 
+  if (onOpen) {
+    return (
+      <div onClick={onOpen} role="button" className="block cursor-pointer">
+        {Card}
+      </div>
+    );
+  }
 
+  return (
+    <a href={link} target="_blank" rel="noreferrer" className="block">
+      {Card}
+    </a>
   );
 }

@@ -1,29 +1,45 @@
+"use client";
+
 import ProjetoCard from "../Card/ProjetoCard";
 import { projetos } from "../../data/projetos";
+import { useState } from "react";
+import ProjectModal from "../Card/ProjectModal";
 
 export default function Projects() {
+  const [selected, setSelected] = useState<any | null>(null);
+  const [open, setOpen] = useState(false);
+
+  function openModal(p: any) {
+    setSelected(p);
+    setOpen(true);
+  }
+
   return (
-    <>
-      <div className="flex flex-col items-center justify-center min-h-screen  p-8 text-black">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2">Projetos</h1>
-          <span className="block bg-blue-600 w-10 h-1 rounded-full mx-auto mb-4"></span>
-          <p>Aqui você irá encontrar alguns dos meus projetos pessoais</p>
+    <section className="py-20 bg-[#0b0a10]">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex gap-3 flex-col items-center text-center">
+          <h2 className="text-3xl font-bold text-white">Projetos</h2>
+          <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
+          <p className="text-gray-300 mb-8">Aqui você irá encontrar alguns dos meus projetos pessoais</p>
         </div>
 
-        <div className="flex flex-col gap-6 items-center p-10 rounded-lg w-full">
-          {projetos.map((projetos, idx) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projetos.map((projeto, idx) => (
             <div key={idx}>
               <ProjetoCard
-                imagem={projetos.imagem}
-                titulo={projetos.titulo}
-                descricao={projetos.descricao}
-                link={projetos.link}
+                imagem={projeto.imagem}
+                titulo={projeto.titulo}
+                descricao={projeto.descricao}
+                link={projeto.link}
+                onOpen={() => openModal(projeto)}
               />
             </div>
           ))}
         </div>
       </div>
-    </>
+
+      <ProjectModal project={selected} open={open} onClose={() => setOpen(false)} />
+    </section>
   );
 }
