@@ -126,15 +126,16 @@ export default function About() {
           </div>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500 transform "></div>
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500 "></div>
 
             <ul className="relative z-10  ">
               {experiencias.map((exp, idx) => (
                 <li key={idx} className="flex flex-col md:flex-row justify-between items-center w-full mb-16 relative ">
                   <div
-                    className={`bg-[#1a1a1f] p-8 rounded-3xl shadow-lg w-full md:w-5/12
+                    className={`bg-[#1a1a1f] p-8 mt-10 rounded-3xl shadow-lg w-full md:w-5/12
                        shadow-blue-100 shadow-sm  border border-blue-500
-              ${idx % 2 === 0 ? "md:mr-auto md:pr-12 text-right" : "md:ml-auto md:pl-12 text-left"}
+                       text-left
+              ${idx % 2 === 0 ? "md:mr-auto md:pr-12 " : "md:ml-auto md:pl-12"}
             `}
                   >
                     <h3 className="text-xl font-semibold text-white">{exp.cargo} - {exp.empresa}</h3>
