@@ -25,6 +25,10 @@ body {
   background-color: var(--background);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Dark mode overrides when .dark is present on documentElement */
 .dark {
   --background: #0b0a10;

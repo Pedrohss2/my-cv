@@ -34,7 +34,7 @@ export default function Home() {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border border-blue-500 text-blue-200 px-6 py-3 rounded-full hover:bg-blue-900/20 transition"
+              className="hover:cursor-pointer inline-flex items-center gap-2 border border-blue-500 text-blue-200 px-6 py-3 rounded-full hover:bg-blue-900/20 transition"
             >
               Entrar em contato
             </a>
