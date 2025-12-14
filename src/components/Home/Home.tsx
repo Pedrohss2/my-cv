@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <section className="min-h-[70vh] px-6 py-40 bg-[#0b0a10] text-white">
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
-        {/* Left content */}
         <div ref={leftView.ref} className={`flex-1 text-center lg:text-left reveal ${leftView.inView ? "in-view" : ""}`}>
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
             Olá, eu sou o
