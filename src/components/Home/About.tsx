@@ -51,13 +51,13 @@ export default function About() {
     },
     {
       cargo: "Engenheiro de desenvolvimento de design de produto",
-      empresa: "Takei Eletrônica",
+      empresa: "Takei Estofados",
       periodo: "Jun 2024 - Set 2024",
       descricao: "",
     },
     {
       cargo: "Estagiário escritório de qualidade / engenharia",
-      empresa: "Takei Eletrônica",
+      empresa: "Takei Estofados",
       periodo: "Out 2024 - Mai 2024",
       descricao: "Experiência em comunicação, treinamento de pessoas e gestão de tarefas. Desenvolvi habilidades em comunicação verbal e escrita, colaboração em projetos multifuncionais, uso do Pacote Office (Excel e Word) e AutoCAD. Possuo competência em organizar, priorizar e executar tarefas diárias, garantindo eficiência e desempenho consistente em ambientes dinâmicos."
     },
