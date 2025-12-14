@@ -1,40 +1,52 @@
+"use client";
+
 import { Projeto } from "@/interfaces/Projetos";
-import useInView from "../../hooks/useInView";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
-type Props = Projeto & { onOpen?: () => void };
+interface ProjetoCardProps extends Projeto {
+  onOpen?: () => void;
+}
 
-export default function ProjetoCard({ imagem, titulo, link, onOpen }: Props) {
-  const bgStyle = imagem ? { backgroundImage: `url(${imagem})` } : undefined;
-  const inview = useInView<HTMLDivElement>({ threshold: 0.15 });
-  const Card = (
-    <div ref={inview.ref} className={`reveal ${inview.inView ? "in-view" : ""}`}>
-      <article className="relative rounded-lg overflow-hidden group shadow-lg min-h-[320px] transform-gpu transition-transform duration-300 ease-out hover:scale-105">
-        <div
-          className="w-full h-64 card-image-bg bg-center bg-cover filter brightness-50 group-hover:brightness-40 transition-all"
-          style={bgStyle}
-          aria-hidden
-        />
-
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
-          <h3 className="text-2xl font-bold card-title drop-shadow-md">{titulo}</h3>
-        </div>
-
-        <div className="absolute left-4 right-4 bottom-0 h-1 bg-gradient-to-r from-blue-500 to-blue-700" />
-      </article>
-    </div>
-  );
-
-  if (onOpen) {
-    return (
-      <div onClick={onOpen} role="button" className="block cursor-pointer">
-        {Card}
-      </div>
-    );
-  }
-
+export default function ProjetoCard({ imagem, titulo, descricao, link, onOpen }: ProjetoCardProps) {
   return (
-    <a href={link} target="_blank" rel="noreferrer" className="block">
-      {Card}
-    </a>
+    <div
+      className="relative bg-[#1a1a1f] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group"
+      onClick={onOpen}
+    >
+      <div className="w-full h-48 md:h-56 overflow-hidden">
+        <Image
+          width={1050}
+          height={200}
+          quality={1000}
+          src={imagem || '/placeholder.png'}
+          alt={titulo}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+      </div>
+
+      <div className="p-5 flex flex-col gap-3">
+        <h3 className="text-xl font-bold text-white">{titulo}</h3>
+        <p className="text-gray-300 text-sm line-clamp-3">{descricao}</p>
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-blue-400 font-medium hover:scale-105 hover:text-blue-500 transition-colors"
+          >
+            <div className="flex gap-3 items-center">
+
+              <span>
+                Ver Projeto
+              </span>
+              <FaArrowRight />
+            </div>
+          </a>
+        )}
+      </div>
+
+      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+    </div>
   );
 }

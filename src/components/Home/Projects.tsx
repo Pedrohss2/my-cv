@@ -3,7 +3,7 @@
 import ProjetoCard from "../Card/ProjetoCard";
 import { projetos } from "../../data/projetos";
 import { useState } from "react";
-import ProjectModal from "../Card/ProjectModal";
+import ProjectModal from "../modal/ProjectModal";
 import { Projeto } from "@/interfaces/Projetos";
 
 export default function Projects() {
