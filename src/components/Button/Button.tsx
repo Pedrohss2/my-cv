@@ -9,8 +9,7 @@ export default function Button({ text, href, icon }: ButtonProps) {
   return (
     <a href={href} >
       <div
-        className="bg-blue-600 text-white p-5 rounded-2xl text-center flex items-center justify-center 
-        transition transform hover:-translate-y-1 hover:scale-105 duration-300 uppercase tracking-wider gap-2"
+        className="hover:cursor-pointer inline-flex items-center gap-2 border border-blue-500 text-blue-200 px-6 py-3 rounded-full hover:bg-blue-900/20 transition"
       >
         {text}
         {icon && icon}

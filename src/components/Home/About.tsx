@@ -40,7 +40,7 @@ export default function About() {
     {
       cargo: "Desenvolvedor full stack Jr",
       empresa: "P.A.Tecnologia",
-      periodo: "Ago 2025 - Atual",
+      periodo: "Jun 2025 - Atual",
       descricao: "",
     },
     {
@@ -70,10 +70,9 @@ export default function About() {
           <h2 className="text-3xl font-bold text-white">Sobre Mim</h2>
           <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
           <p className="text-gray-300 max-w-3xl">
-            Sou um <strong>desenvolvedor Full Stack Júnior</strong> apaixonado
-            por tecnologia, sempre buscando criar aplicações modernas,
-            performáticas e escaláveis.
+            Sou <strong>desenvolvedor Full Stack Júnior</strong>, apaixonado por tecnologia e sempre buscando criar aplicações modernas, performáticas e escaláveis. Atualmente estou focado em aprofundar meus conhecimentos em <strong>arquitetura de software</strong>, <strong>clean code</strong>, <strong>AWS</strong> e evoluir continuamente como desenvolvedor.
           </p>
+
         </div>
 
         <div
@@ -81,12 +80,9 @@ export default function About() {
           className={`text-gray-300 leading-relaxed max-w-3xl mx-auto text-center reveal ${inview.inView ? "in-view" : ""}`}
         >
           <p className="sm:text-lg mb-6">
-            Tenho experiência prática no desenvolvimento <strong>front-end</strong> e{" "}
-            <strong>back-end</strong>, utilizando tecnologias como{" "}
-            <strong>React</strong>, <strong>Next.js</strong>,{" "}
-            <strong>Node.js</strong>, <strong>JavaScript</strong>,{" "}
-            <strong>TypeScript</strong> e <strong>NestJS</strong>.
+            Tenho experiência prática no desenvolvimento <strong>front-end</strong> e <strong>back-end</strong>, trabalhando com tecnologias como <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>JavaScript</strong>, <strong>TypeScript</strong> e <strong>NestJS</strong>. Além disso, atuei em suporte técnico, trabalhando com sistemas corporativos, desenvolvimento de bancos de dados, backend, front-end, arquitetura de software e suporte à tomada de decisões estratégicas.
           </p>
+
           <p className="sm:text-lg mb-6">
             Trabalho com bancos de dados como <strong>PostgreSQL</strong> e{" "}
             <strong>MySQL</strong>, criando estruturas eficientes e seguras para
@@ -155,10 +151,10 @@ export default function About() {
             <h2 className="text-3xl font-bold text-white">Habilidades</h2>
             <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
+          <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
             {techs.map((tech, idx) => (
               <SkillCard key={idx}>
-                <div className="flex flex-col items-center gap-2">
+                <div className="flex flex-col items-center gap-2 ">
                   {tech.icon}
                   <span>{tech.name}</span>
                 </div>

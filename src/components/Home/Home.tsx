@@ -2,6 +2,7 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import useInView from "../../hooks/useInView";
+import Button from "../Button/Button";
 
 export default function Home() {
   const leftView = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -32,12 +33,10 @@ export default function Home() {
               Download CV
             </a>
 
-            <a
+            <Button
+              text="Entrar em contato"
               href="#contact"
-              className="hover:cursor-pointer inline-flex items-center gap-2 border border-blue-500 text-blue-200 px-6 py-3 rounded-full hover:bg-blue-900/20 transition"
-            >
-              Entrar em contato
-            </a>
+            />
           </div>
         </div>
 
