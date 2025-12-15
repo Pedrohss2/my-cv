@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "../components/Header/Header";
 
 export const metadata: Metadata = {
-  title: "My cv",
+  title: "Pedro Henrique - Portfolio",
   description: "Meu portfolio",
 };
 
