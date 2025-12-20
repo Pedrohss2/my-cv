@@ -29,15 +29,6 @@ export default function Footer() {
             <li className="hover:text-blue-500">
               <Link href={"https://github.com/pedrohss"}>Github</Link>
             </li>
-            <li className="hover:text-blue-500">
-              <Link
-                href="/Pedro Henrique.pdf"
-                download
-                className="hover:text-blue-500"
-              >
-                Baixar CV
-              </Link>
-            </li>
           </nav>
         </div>
 
