@@ -9,18 +9,6 @@ export default function Contact() {
 
       <div className="flex gap-8 mt-6">
         <a
-          href="https://wa.me/5543920005946"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center gap-2"
-        >
-          <div className="w-16 h-16 rounded-full bg-[#0f1115] flex items-center justify-center shadow-sm hover:scale-105 transition-transform">
-            <MdLocalPhone className="text-blue-400 text-2xl" />
-          </div>
-          <span className="text-sm text-white">WhatsApp</span>
-        </a>
-
-        <a
           href="mailto:pedro2266809ph@gmail.com"
           className="flex flex-col items-center gap-2"
         >
