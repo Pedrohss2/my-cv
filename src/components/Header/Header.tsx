@@ -89,15 +89,6 @@ export default function Header() {
             <FaGithub size={20} />
             Github
           </Link>
-
-          <Link
-            href="/Pedro Henrique.pdf"
-            download
-            className="hover:text-blue-500 hover:scale-105 transition-all flex items-center gap-2"
-          >
-            <GrDownload size={20} />
-            Baixar CV
-          </Link>
         </nav>
       </header>
 
