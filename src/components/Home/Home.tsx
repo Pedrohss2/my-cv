@@ -24,15 +24,6 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex items-center gap-4 justify-center lg:justify-start">
-            <a
-              href="/Pedro%20Henrique.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-3 rounded-full shadow-lg transition"
-            >
-              Download CV
-            </a>
-
             <Button
               text="Entrar em contato"
               href="#contact"
@@ -40,7 +31,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right image with gradient ring */}
         <div ref={rightView.ref} className={`flex-1 flex justify-center lg:justify-end reveal ${rightView.inView ? "in-view" : ""}`}>
           <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full p-2 bg-gradient-to-br from-blue-500 to-blue-700">
             <div className="w-full h-full rounded-full bg-gradient-to-b from-[#12203b] to-[#081021] overflow-hidden flex items-center justify-center">
