@@ -8,18 +8,19 @@ interface ProjetoCardProps extends Projeto {
   onOpen?: () => void;
 }
 
-export default function ProjetoCard({ imagem, titulo, descricao, link, onOpen }: ProjetoCardProps) {
+export default function ProjetoCard({ imagem, imagens, titulo, descricao, link, onOpen }: ProjetoCardProps) {
+  const cover = imagens && imagens.length > 0 ? imagens[0] : imagem || '/placeholder.png';
   return (
     <div
       className="relative bg-[#1a1a1f] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer group"
       onClick={onOpen}
     >
-      <div className="w-full h-48 md:h-56 overflow-hidden">
+      <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 overflow-hidden">
         <Image
           width={1050}
           height={200}
           quality={1000}
-          src={imagem || '/placeholder.png'}
+          src={cover}
           alt={titulo}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />

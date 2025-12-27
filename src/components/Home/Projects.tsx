@@ -30,6 +30,7 @@ export default function Projects() {
             <div key={idx}>
               <ProjetoCard
                 imagem={projeto.imagem}
+                imagens={projeto.imagens}
                 titulo={projeto.titulo}
                 descricao={projeto.descricao}
                 link={projeto.link}
