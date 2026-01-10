@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { IoMdClose } from "react-icons/io";
-import { Projeto } from "../../interfaces/Projetos";
+import { Project } from "../../interfaces/Projetos";
 
 export default function ProjectModal({
     project,
     open,
     onClose,
 }: {
-    project: Projeto | null;
+    project: Project | null;
     open: boolean;
     onClose: () => void;
 }) {
