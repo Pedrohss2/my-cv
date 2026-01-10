@@ -3,65 +3,12 @@
 import Button from "../Button/Button";
 import SkillCard from "./SkillCard";
 import useInView from "../../hooks/useInView";
-import { SiTypescript, SiNextdotjs, SiNestjs, SiPostgresql, SiMysql, SiTailwindcss, SiPrisma, SiSocketdotio } from "react-icons/si";
-import { FaJs, FaJava, FaNodeJs, FaReact, FaDocker, FaGitAlt, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
+import { experience } from "../../data/experience";
+import { careerTimeline } from "../../data/careerTimeline";
+import { techs } from "../../data/techs";
 
 export default function About() {
   const inview = useInView<HTMLDivElement>();
-
-  const techs = [
-    { name: "JavaScript", icon: <FaJs className="w-6 h-6 text-yellow-400" /> },
-    { name: "TypeScript", icon: <SiTypescript className="w-6 h-6 text-blue-500" /> },
-    { name: "Node.js", icon: <FaNodeJs className="w-6 h-6 text-green-500" /> },
-    { name: "Nest.js", icon: <SiNestjs className="w-6 h-6 text-red-600" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="w-6 h-6 text-white" /> },
-    { name: "React.js", icon: <FaReact className="w-6 h-6 text-white" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="w-6 h-6 text-blue-700" /> },
-    { name: "Mysql", icon: <SiMysql className="w-6 h-6 text-blue-600" /> },
-    { name: "REST APIs", icon: <FaNodeJs className="w-6 h-6 text-green-400" /> },
-    { name: "HTML5", icon: <FaHtml5 className="w-6 h-6 text-orange-500" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="w-6 h-6 text-blue-500" /> },
-    { name: "Tailwind", icon: <SiTailwindcss className="w-6 h-6 text-blue-400" /> },
-    { name: "Socket", icon: <SiSocketdotio className="w-6 h-6 text-purple-500" /> },
-    { name: "Git", icon: <FaGitAlt className="w-6 h-6 text-orange-600" /> },
-    { name: "GitHub", icon: <FaGithub className="w-6 h-6 text-white" /> },
-    { name: "Prisma", icon: <SiPrisma className="w-6 h-6 text-indigo-400" /> },
-    { name: "Docker", icon: <FaDocker className="w-6 h-6 text-blue-400" /> },
-  ];
-
-  const careerTimeline = [
-    { year: "2023", title: "Estagiário" },
-    { year: "2024 - 2025", title: "Suporte" },
-    { year: "2025", title: "Dev Trainee" },
-    { year: "2025", title: "Dev FullStack Júnior" },
-  ];
-
-  const experiencias = [
-    {
-      cargo: "Desenvolvedor full stack Jr",
-      empresa: "P.A.Tecnologia",
-      periodo: "Jun 2025 - Atual",
-      descricao: "",
-    },
-    {
-      cargo: "Analista de Suporte Técnico",
-      empresa: "P.A. Tecnologia",
-      periodo: "Out 2024 - Jun 2025",
-      descricao: "Responsável pelo atendimento interno e externo de usuários, suporte técnico em sistemas de ERP e gestão, manutenção de computadores, administração de servidores Windows e bancos de dados (Firebird, PostgreSQL, MySQL). Conduzia treinamentos e apresentações de sistemas, planejamento e organização de demandas com Trello, testes e validação de sistemas (XML). Desenvolvi habilidades em comunicação, colaboração e atendimento ao cliente, garantindo eficiência e qualidade nos serviços de TI."
-    },
-    {
-      cargo: "Engenheiro de desenvolvimento de design de produto",
-      empresa: "Takei Estofados",
-      periodo: "Jun 2024 - Set 2024",
-      descricao: "",
-    },
-    {
-      cargo: "Estagiário escritório de qualidade / engenharia",
-      empresa: "Takei Estofados",
-      periodo: "Out 2024 - Mai 2024",
-      descricao: "Experiência em comunicação, treinamento de pessoas e gestão de tarefas. Desenvolvi habilidades em comunicação verbal e escrita, colaboração em projetos multifuncionais, uso do Pacote Office (Excel e Word) e AutoCAD. Possuo competência em organizar, priorizar e executar tarefas diárias, garantindo eficiência e desempenho consistente em ambientes dinâmicos."
-    },
-  ];
 
   return (
     <section className="bg-[#0b0a10] text-white py-20">
@@ -70,7 +17,10 @@ export default function About() {
           <h2 className="text-3xl font-bold text-white">Sobre Mim</h2>
           <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
           <p className="text-gray-300 max-w-3xl">
-            Sou <strong>desenvolvedor Full Stack Júnior</strong>, apaixonado por tecnologia e sempre buscando criar aplicações modernas, performáticas e escaláveis. Atualmente estou focado em aprofundar meus conhecimentos em <strong>arquitetura de software</strong>, <strong>clean code</strong>, <strong>AWS</strong> e evoluir continuamente como desenvolvedor.
+            Sou <strong>Desenvolvedor Full Stack Júnior</strong>, apaixonado por tecnologia e focado em criar aplicações modernas, performáticas e escaláveis.
+            Atualmente, estou aprofundando meus conhecimentos em <strong>arquitetura de software</strong>, <strong>Clean Code</strong>, <strong>AWS</strong>,
+            <strong>Azure</strong> e outras ferramentas de <strong>cloud e dados</strong>, buscando evolução contínua como desenvolvedor.
+            Tenho facilidade em aprender novas tecnologias e estou sempre aberto a encarar novos desafios.
           </p>
 
         </div>
@@ -79,8 +29,16 @@ export default function About() {
           ref={inview.ref}
           className={`text-gray-300 leading-relaxed max-w-3xl mx-auto text-center reveal ${inview.inView ? "in-view" : ""}`}
         >
+
           <p className="sm:text-lg mb-6">
-            Tenho experiência prática no desenvolvimento <strong>front-end</strong> e <strong>back-end</strong>, trabalhando com tecnologias como <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>JavaScript</strong>, <strong>TypeScript</strong> e <strong>NestJS</strong>. Além disso, atuei em suporte técnico, trabalhando com sistemas corporativos, desenvolvimento de bancos de dados, backend, front-end, arquitetura de software e suporte à tomada de decisões estratégicas.
+            Possuo experiência prática em <strong>desenvolvimento front-end e back-end</strong>, trabalhando com
+            <strong> React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>JavaScript</strong>,
+            <strong> TypeScript</strong> e <strong>NestJS</strong>.
+            Utilizo <strong>Tailwind CSS</strong>, <strong>ShadCN/UI</strong> e <strong>CSS puro</strong> para estilização,
+            além de <strong>Git e GitHub</strong> para versionamento de código, seguindo boas práticas de commits e branches.
+            Já atuei com <strong>suporte técnico em TI</strong> e <strong>sistemas ERP</strong>, envolvendo backend, frontend,
+            bancos de dados, arquitetura de software e apoio a decisões técnicas. Utilizo <strong>Inteligência Artificial</strong>
+            no dia a dia para aumentar produtividade e qualidade de entrega.
           </p>
 
           <p className="sm:text-lg mb-6">
@@ -125,7 +83,7 @@ export default function About() {
             <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500 "></div>
 
             <ul className="relative z-10  ">
-              {experiencias.map((exp, idx) => (
+              {experience.map((exp, idx) => (
                 <li key={idx} className="flex flex-col md:flex-row justify-between items-center w-full mb-16 relative ">
                   <div
                     className={`bg-[#1a1a1f] p-8 mt-10 rounded-3xl shadow-lg w-full md:w-5/12

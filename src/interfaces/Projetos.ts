@@ -1,5 +1,5 @@
 
-export interface Projeto {
+export interface Project {
   imagem?: string;
   imagens?: string[];
   titulo: string;

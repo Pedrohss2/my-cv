@@ -1,16 +1,16 @@
 "use client";
 
 import ProjetoCard from "../Card/ProjetoCard";
-import { projetos } from "../../data/projetos";
+import { projects } from "../../data/project";
 import { useState } from "react";
 import ProjectModal from "../modal/ProjectModal";
-import { Projeto } from "@/interfaces/Projetos";
+import { Project } from "@/interfaces/Projetos";
 
 export default function Projects() {
-  const [selected, setSelected] = useState<Projeto | null>(null);
+  const [selected, setSelected] = useState<Project | null>(null);
   const [open, setOpen] = useState(false);
 
-  function openModal(p: Projeto) {
+  function openModal(p: Project) {
     setSelected(p);
     setOpen(true);
   }
@@ -26,7 +26,7 @@ export default function Projects() {
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projetos.map((projeto, idx) => (
+          {projects.map((projeto, idx) => (
             <div key={idx}>
               <ProjetoCard
                 imagem={projeto.imagem}

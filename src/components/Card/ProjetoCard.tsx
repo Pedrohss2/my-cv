@@ -1,10 +1,10 @@
 "use client";
 
-import { Projeto } from "@/interfaces/Projetos";
+import { Project } from "@/interfaces/Projetos";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
-interface ProjetoCardProps extends Projeto {
+interface ProjetoCardProps extends Project {
   onOpen?: () => void;
 }
 
