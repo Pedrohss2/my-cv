@@ -18,10 +18,11 @@ export default function About() {
           <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
           <p className="text-gray-300 max-w-3xl">
             Sou <strong>Desenvolvedor Full Stack Júnior</strong>, apaixonado por tecnologia e focado em criar aplicações modernas, performáticas e escaláveis.
-            Atualmente, estou aprofundando meus conhecimentos em <strong>arquitetura de software</strong>, <strong>Clean Code</strong>, <strong>AWS</strong>,
-            <strong>Azure</strong> e outras ferramentas de <strong>cloud e dados</strong>, buscando evolução contínua como desenvolvedor.
-            Tenho facilidade em aprender novas tecnologias e estou sempre aberto a encarar novos desafios.
+            Atualmente, estou direcionando meus estudos para a <strong>área de dados</strong>, com foco em <strong>engenharia e análise</strong>, e já possuo conhecimentos consolidados em <strong>Python</strong>, <strong>SQL</strong>, <strong>Apache Spark</strong> e <strong>MongoDB</strong>, aplicados no tratamento, processamento e análise de dados.
+            Também sigo aprofundando meus conhecimentos em <strong>arquitetura de software</strong>, <strong>Clean Code</strong>, <strong>AWS</strong>, <strong>Azure</strong> e outras ferramentas de <strong>cloud e dados</strong>, buscando evolução contínua como desenvolvedor.
+            Tenho facilidade em aprender novas tecnologias e estou sempre aberto a novos desafios.
           </p>
+
 
         </div>
 

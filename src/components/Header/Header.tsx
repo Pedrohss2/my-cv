@@ -16,7 +16,6 @@ export default function Header() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Initialize theme from localStorage; default to dark if none
     const stored = localStorage.getItem("theme");
     if (stored === "dark") setIsDark(true);
     else if (stored === "light") setIsDark(false);
