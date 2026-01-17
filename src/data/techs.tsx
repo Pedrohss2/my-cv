@@ -1,6 +1,6 @@
 import { JSX } from "react";
 import { FaJs, FaNodeJs, FaReact, FaCss3Alt, FaHtml5, FaGitAlt, FaGithub, FaDocker } from "react-icons/fa";
-import { SiTypescript, SiNestjs, SiNextdotjs, SiPostgresql, SiMysql, SiTailwindcss, SiShadcnui, SiSocketdotio, SiPrisma, SiPython, SiSparkar, SiSqlalchemy } from "react-icons/si";
+import { SiTypescript, SiNestjs, SiNextdotjs, SiPostgresql, SiMysql, SiTailwindcss, SiShadcnui, SiSocketdotio, SiPrisma, SiPython, SiSparkar, SiSqlalchemy, SiRedis, SiRabbitmq, SiApachekafka } from "react-icons/si";
 
 type Tech = {
     name: string;
@@ -17,6 +17,9 @@ export const techs: Tech[] = [
     { name: "Next.js", icon: <SiNextdotjs className="w-6 h-6 text-white" /> },
     { name: "React.js", icon: <FaReact className="w-6 h-6 text-white" /> },
     { name: "PostgreSQL", icon: <SiPostgresql className="w-6 h-6 text-blue-700" /> },
+    { name: "Redis", icon: <SiRedis className="w-6 h-6 text-blue-700" /> },
+    { name: "RabbitMQ", icon: <SiRabbitmq className="w-6 h-6 text-blue-700" /> },
+    { name: "Kafka", icon: <SiApachekafka className="w-6 h-6 text-blue-700" /> },
     { name: "Mysql", icon: <SiMysql className="w-6 h-6 text-blue-600" /> },
     { name: "REST APIs", icon: <FaNodeJs className="w-6 h-6 text-green-400" /> },
     { name: "HTML5", icon: <FaHtml5 className="w-6 h-6 text-orange-500" /> },
