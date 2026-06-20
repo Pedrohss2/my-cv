@@ -17,10 +17,7 @@ export default function About() {
           <h2 className="text-3xl font-bold text-white">Sobre Mim</h2>
           <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-0.5" />
           <p className="text-gray-300 max-w-3xl">
-            Sou <strong>Desenvolvedor Full Stack Júnior</strong>, apaixonado por tecnologia e focado em criar aplicações modernas, performáticas e escaláveis.
-            Atualmente, estou direcionando meus estudos para a <strong>área de dados</strong>, com foco em <strong>engenharia e análise</strong>, e já possuo conhecimentos consolidados em <strong>Python</strong>, <strong>SQL</strong>, <strong>Apache Spark</strong> e <strong>MongoDB</strong>, aplicados no tratamento, processamento e análise de dados.
-            Também sigo aprofundando meus conhecimentos em <strong>arquitetura de software</strong>, <strong>Clean Code</strong>, <strong>AWS</strong>, <strong>Azure</strong> e outras ferramentas de <strong>cloud e dados</strong>, buscando evolução contínua como desenvolvedor.
-            Tenho facilidade em aprender novas tecnologias e estou sempre aberto a novos desafios.
+            Sou <strong>Desenvolvedor Full Stack</strong> com experiência no desenvolvimento de aplicações web modernas, plataformas SaaS, APIs REST, integrações com sistemas externos e automação de processos. Atualmente atuo no desenvolvimento de soluções completas utilizando <strong>React, Next.js, Node.js, NestJS e TypeScript</strong>, participando desde o levantamento de requisitos até decisões de arquitetura, desenvolvimento, deploy e manutenção de aplicações em produção.
           </p>
 
 
@@ -32,20 +29,15 @@ export default function About() {
         >
 
           <p className="sm:text-lg mb-6">
-            Possuo experiência prática em <strong>desenvolvimento front-end e back-end</strong>, trabalhando com
-            <strong> React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, <strong>JavaScript</strong>,
-            <strong> TypeScript</strong> e <strong>NestJS</strong>.
-            Utilizo <strong>Tailwind CSS</strong>, <strong>ShadCN/UI</strong> e <strong>CSS puro</strong> para estilização,
-            além de <strong>Git e GitHub</strong> para versionamento de código, seguindo boas práticas de commits e branches.
-            Já atuei com <strong>suporte técnico em TI</strong> e <strong>sistemas ERP</strong>, envolvendo backend, frontend,
-            bancos de dados, arquitetura de software e apoio a decisões técnicas. Utilizo <strong>Inteligência Artificial</strong>
-            no dia a dia para aumentar produtividade e qualidade de entrega.
+            Tenho experiência no desenvolvimento de sistemas multiusuário, com autenticação, controle de permissões, diferentes níveis de acesso, dashboards administrativos, fluxos de aprovação e gerenciamento de processos em tempo real. Atuo na criação de aplicações voltadas para otimização operacional, organização de dados e melhoria da experiência de usuários e equipes.
           </p>
 
           <p className="sm:text-lg mb-6">
-            Trabalho com bancos de dados como <strong>PostgreSQL</strong> e{" "}
-            <strong>MySQL</strong>, criando estruturas eficientes e seguras para
-            sustentar aplicações robustas.
+            Possuo experiência prática com integrações bancárias e gateways de pagamento, emissão de NF-e/NFS-e, webhooks, microsserviços, autenticação JWT, automações com n8n e integração com serviços externos. Também trabalho com modelagem de bancos de dados relacionais como <strong>PostgreSQL e MySQL</strong>, buscando sempre estruturas organizadas, seguras e preparadas para evolução.
+          </p>
+
+          <p className="sm:text-lg mb-6">
+            Tenho conhecimento em <strong>Docker, VPS, Linux, CI/CD, Clean Code</strong>, arquitetura escalável e desenvolvimento ágil. Já desenvolvi sistemas comerciais envolvendo cadastros complexos, gestão de usuários, documentos, contratos, agendas, notificações e painéis de acompanhamento.
           </p>
           <div className="w-40 mt-6 mx-auto">
             <Button text="Contato" href="#contact" />
@@ -80,17 +72,17 @@ export default function About() {
             <span className="block bg-gradient-to-r from-blue-500 to-blue-700 w-32 h-1 rounded-full" />
           </div>
 
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative w-full mx-auto">
             <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-500 "></div>
 
             <ul className="relative z-10  ">
               {experience.map((exp, idx) => (
                 <li key={idx} className="flex flex-col md:flex-row justify-between items-center w-full mb-16 relative ">
                   <div
-                    className={`bg-[#1a1a1f] p-8 mt-10 rounded-3xl shadow-lg w-full md:w-5/12
+                    className={`bg-[#1a1a1f] p-8 mt-10 rounded-3xl shadow-lg w-full md:w-[47%]
                        shadow-blue-100 shadow-sm  border border-blue-500
                        text-left
-              ${idx % 2 === 0 ? "md:mr-auto md:pr-12 " : "md:ml-auto md:pl-12"}
+              ${idx % 2 === 0 ? "md:mr-auto " : "md:ml-auto "}
             `}
                   >
                     <h3 className="text-xl font-semibold text-white">{exp.cargo} - {exp.empresa}</h3>

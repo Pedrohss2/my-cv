@@ -10,7 +10,7 @@ export const experience: Experience[] = [
         cargo: "Desenvolvedor Full stack Jr",
         empresa: "P.A.Tecnologia",
         periodo: "Jun 2025 - Atual",
-        descricao: "",
+        descricao: "Participação em reuniões técnicas e alinhamentos diretos com clientes para levantamento e entendimento de requisitos. Tomada de decisões relacionadas à arquitetura de software e organização de código . Desenvolvimento completo de funcionalidades frontend e backend. Criação, integração e manutenção de APIs REST utilizando Node.js e NestJS. Construção de interfaces modernas e responsivas com React e Next.js. Integração com APIs externas, gateways de pagamento e sistemas bancários, incluindo Stripe, Sicredi e XPay. Implementação de webhooks, automações e comunicação entre serviços. Desenvolvimento de integrações para emissão de notas fiscais eletrônicas(NFe/NFS - e). Automação de processos utilizando n8n para disparo de emails e integrações entre plataformas SaaS. Modelagem e manutenção de bancos de dados PostgreSQL, MySQL e Firebird. Implementação de autenticação, autorização e segurança de APIs com JWT e controle de acesso. Containerização e deploy de aplicações utilizando Docker, VPS e serviços cloud. Trabalho colaborativo em times ágeis, aplicando boas práticas de Clean Code, arquitetura, testes e versionamento com Git / GitHub.",
     },
     {
         cargo: "Analista de Suporte Técnico",

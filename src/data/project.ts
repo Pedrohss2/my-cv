@@ -31,4 +31,13 @@ export const projects: Project[] = [
     "descricao": "API desenvolvida em NestJS com TypeScript e Prisma ORM, PostgreSql, Redis e oferecendo CRUD completo para produtos, categorias e usuários, autenticação JWT, upload de imagens e integração com banco de dados relacional. Estrutura modular e arquitetura limpa para manutenção e escalabilidade.",
     "link": "https://github.com/Pedrohss2/cardapio-backend.git"
   },
+
+  {
+    "imagens": [
+      '/agendou/login.png'
+    ],
+    "titulo": "Agendou - SaaS para locadores de brinquedos",
+    "descricao": "SaaS comercial para gerenciamento de agendamentos, locações e operações empresariais. Possui arquitetura multiusuário com autenticação, controle de permissões, dashboards administrativos, gestão de clientes, serviços, agenda, contratos e acompanhamento de processos em tempo real. Conta com automações, notificações e fluxos personalizados para otimizar a operação dos usuários.",
+    "link": ""
+  },
 ];
